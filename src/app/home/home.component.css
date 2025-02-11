@@ -1,0 +1,98 @@
+a:hover{
+   cursor: pointer; 
+}
+
+/* Basic navbar styling */
+.navbar-danger {
+  background-color: rgb(139, 101, 139); /* Dark blue background color */
+  border-radius: 0; /* Remove border radius */
+  margin-bottom: 0; /* Remove bottom margin */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Align items vertically */
+  position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-header {
+  flex: 1; /* Flex grow for the brand */
+
+}
+.navbar-brand{
+  color:white;
+}
+.navbar-brand > a:hover,
+.navbar-brand > .active > a {
+  background-color: #af7dbab4; /* Slightly lighter blue for hover and active states */
+  color: #FFFFFF; /* Ensure text color remains white */
+}
+.navbar-nav {
+  display: flex;
+  margin: 0; /* Remove default margin */
+}
+
+.navbar-nav > li {
+  margin-left: 10px; /* Space between menu items */
+}
+
+.navbar-nav > li > a {
+  color: #FFFFFF; /* White text color for navbar links */
+  padding: 15px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > .active > a {
+  background-color: #af7dbab4; /* Slightly lighter blue for hover and active states */
+  color: #FFFFFF; /* Ensure text color remains white */
+}
+
+/* Form styling */
+.navbar-form {
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox */
+}
+
+.form-control {
+  border-radius: 0; /* Remove border radius for form elements */
+  height: 34px; /* Adjust height */
+}
+
+.btn-default {
+  background-color: #FFFFFF; /* White background for button */
+ 
+}
+
+.btn-default:hover {
+  background-color: #E6E6E6; /* Light gray background on hover */
+   /* Dark blue text color on hover */
+}
+
+/* Profile link styling */
+.profile-nav {
+  margin-left: auto; /* Push to the right */
+  display: flex; /* Ensure it’s aligned correctly */
+}
+
+.profile-nav > li {
+  margin-left: 10px; /* Space between profile item and other items */
+}
+
+.profile-nav > li > a {
+  color: #FFFFFF; /* White text color for profile link */
+  padding: 15px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+.profile-nav > li > a:hover,
+.profile-nav > .active > a {
+  background-color: #af7dbab4; /* Slightly lighter blue for hover and active states */
+  color: #FFFFFF; /* Ensure text color remains white */
+}
+

@@ -1,0 +1,46 @@
+.book-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px; /* Space between cards */
+    padding: 16px;
+  }
+  
+  .book-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    background-color: #fff;
+  }
+  
+  .book-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .book-info {
+    margin-top: 8px;
+  }
+  
+  .book-title {
+    font-size: 1em; /* Adjust font size */
+    margin: 0;
+  }
+  
+  .book-author {
+    color: #555;
+    font-size: 0.9em; /* Adjust font size */
+  }
+  
+  .book-description {
+    margin-top: 8px;
+    color: #333;
+    font-size: 0.8em; /* Adjust font size */
+  }
+  

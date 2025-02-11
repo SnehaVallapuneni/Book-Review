@@ -1,0 +1,15 @@
+<div class="book-detail">
+    <img [src]="thumbnail" alt="{{ book.volumeInfo.title }}" class="book-image"/>
+    <div class="book-info">
+      <h1 class="book-title">{{ book.volumeInfo.title }}</h1>
+      <p class="book-author">{{ book.volumeInfo.authors }}</p>
+      <p class="book-description">{{ book.volumeInfo.description }}</p>
+    </div>
+</div>
+<div class="book-review">
+    <button type="submit"(click)="onSubmit(bookId)">Post Review</button>
+
+    <button type="submit" (click)="ViewReview(bookId)">View Reviews</button>
+</div>  
+
+
