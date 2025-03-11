@@ -1,0 +1,19 @@
+<!--<div class="book-card">
+    <img [src]="thumbnail" alt="{{ book.volumeInfo.title }}" class="book-image"/>
+    <div class="book-info">
+      <h3 class="book-title">{{ book.volumeInfo.title }}</h3>
+      <p class="book-author">{{ book.volumeInfo.authors }}</p>
+     <p class="book-description">{{ book.volumeInfo.description }}</p>
+    </div>
+</div>-->
+<div class="book-card-container">
+  <div class="book-card">
+    <div class="book-content" (click)="viewBookDetail()">
+      <img [src]="thumbnail" [alt]="title" class="book-image"/>
+      <div class="book-info">
+        <h3 class="book-title">{{ title }}</h3>
+        <p class="book-author">{{ authors }}</p>
+      </div>
+    </div>
+  </div>
+</div>

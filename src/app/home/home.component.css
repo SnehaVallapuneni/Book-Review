@@ -1,0 +1,235 @@
+a:hover{
+   cursor: pointer; 
+}
+
+/* Basic navbar styling */
+.navbar-danger {
+  background-color: rgb(139, 101, 139); /* Dark blue background color */
+  border-radius: 0; /* Remove border radius */
+  margin-bottom: 0; /* Remove bottom margin */
+  display: flex; /* Use flexbox */
+  justify-content: space-between; /* Space items evenly */
+  align-items: center; /* Align items vertically */
+  position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-header {
+  flex: 1; /* Flex grow for the brand */
+
+}
+.navbar-brand{
+  color:white;
+}
+.navbar-brand > a:hover,
+.navbar-brand > .active > a {
+  background-color: #af7dbab4; /* Slightly lighter blue for hover and active states */
+  color: #FFFFFF; /* Ensure text color remains white */
+}
+.navbar-nav {
+  display: flex;
+  margin: 0; /* Remove default margin */
+}
+
+.navbar-nav > li {
+  margin-left: 10px; /* Space between menu items */
+}
+
+.navbar-nav > li > a {
+  color: #FFFFFF; /* White text color for navbar links */
+  padding: 15px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > .active > a {
+  background-color: #af7dbab4; /* Slightly lighter blue for hover and active states */
+  color: #FFFFFF; /* Ensure text color remains white */
+}
+
+/* Form styling */
+.navbar-form {
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox */
+}
+
+.form-control {
+  border-radius: 0; /* Remove border radius for form elements */
+  height: 34px; /* Adjust height */
+}
+
+.btn-default {
+  background-color: #FFFFFF; /* White background for button */
+ 
+}
+
+.btn-default:hover {
+  background-color: #E6E6E6; /* Light gray background on hover */
+   /* Dark blue text color on hover */
+}
+
+/* Profile link styling */
+.profile-nav {
+  margin-left: auto; /* Push to the right */
+  display: flex; /* Ensure it's aligned correctly */
+}
+
+.profile-nav > li {
+  margin-left: 10px; /* Space between profile item and other items */
+}
+
+.profile-nav > li > a {
+  color: #FFFFFF; /* White text color for profile link */
+  padding: 15px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+.profile-nav > li > a:hover,
+.profile-nav > .active > a {
+  background-color: #af7dbab4; /* Slightly lighter blue for hover and active states */
+  color: #FFFFFF; /* Ensure text color remains white */
+}
+
+/* Books Grid Layout */
+.books-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.books-container h2 {
+  color: #433352;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.book-item {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.book-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-group {
+  position: relative;
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 300px;
+  padding-right: 70px !important;
+  border-radius: 20px;
+  border: 1px solid #9c73ca;
+  padding: 8px 35px 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(156, 115, 202, 0.2);
+  border-color: #9c73ca;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9c73ca;
+  pointer-events: none;
+}
+
+.searching-message {
+  text-align: center;
+  color: #9c73ca;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+.no-results {
+  text-align: center;
+  color: #666;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: rgba(156, 115, 202, 0.1);
+  border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .search-input {
+    width: 200px;
+  }
+  
+  .books-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+}
+
+.welcome-message {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: rgba(156, 115, 202, 0.1);
+  border-radius: 12px;
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+.welcome-message h2 {
+  color: #433352;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.welcome-message p {
+  color: #666;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.clear-search {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9c73ca;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.clear-search:hover {
+  background-color: rgba(156, 115, 202, 0.1);
+  color: #433352;
+}
+

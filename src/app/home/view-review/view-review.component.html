@@ -1,0 +1,45 @@
+<!--<div *ngIf="reviews.length > 0; else noReviews">
+    <h2>Reviews for Book ID: {{ bookId }}</h2>
+    <ul>
+      <li *ngFor="let review of reviews">
+        <strong>{{ review.reviewerName }}</strong> (Rating: {{ review.rating }}):
+        <p>{{ review.comment }}</p>
+      </li>
+    </ul>
+  </div>
+  
+  <ng-template #noReviews>
+    <p>No reviews available for this book.</p>
+  </ng-template>
+-->
+<div class="review-container">
+  <h2>Book Reviews</h2>
+  <div *ngIf="reviews.length > 0; else noReviews" class="review-cards">
+    <div class="review-card" *ngFor="let review of reviews">
+      <div class="review-header">
+        <strong>{{ review.reviewerName }}</strong>
+        <div class="review-actions">
+          <button (click)="editReview(review)" class="icon-btn pen-btn" title="Edit">
+            ✏️
+          </button>
+          <button (click)="deleteReview(review)" class="icon-btn bin-btn" title="Delete">
+            🗑️
+          </button>
+        </div>
+      </div>
+      <div class="review-content">
+        <p>{{ review.comment }}</p>
+        <div class="rating">
+          <span>Rating:</span>
+          {{ '★'.repeat(review.rating) }}{{ '☆'.repeat(5 - review.rating) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noReviews>
+  <div class="no-reviews">
+    <p>No reviews available for this book yet. Be the first to share your thoughts!</p>
+  </div>
+</ng-template>

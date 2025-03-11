@@ -1,0 +1,52 @@
+<nav class="navbar navbar-danger">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="/home" routerLinkActive="active">BookShelf</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/home" routerLinkActive="active">Home</a></li>
+      </ul>
+      <form class="navbar-form navbar-left" (submit)="$event.preventDefault(); searchBook()">
+        <div class="form-group search-group">
+          <input 
+            type="text" 
+            class="form-control search-input" 
+            [(ngModel)]="title" 
+            (input)="onSearchInput($event)"
+            placeholder="Search by title or author" 
+            name="search">
+          <div class="search-icon">🔍</div>
+          <button 
+            *ngIf="title" 
+            type="button" 
+            class="clear-search" 
+            (click)="clearSearch()" 
+            title="Clear search">
+            ✕
+          </button>
+        </div>
+      </form>
+      <ul class="nav navbar-nav profile-nav">
+        <li>
+          <a routerLink="/my-profile" routerLinkActive="active">My Profile</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="books-container">
+    <h2>{{ hasSearched ? 'Search Results' : 'Available Books' }}</h2>
+    
+    <div *ngIf="isSearching" class="searching-message">
+      Searching...
+    </div>
+    
+    <div *ngIf="books | async as bookList" class="books-grid">
+      <div *ngIf="bookList.length === 0 && hasSearched" class="no-results">
+        No books found. Try a different search term.
+      </div>
+      <div *ngFor="let book of bookList | valueArray" class="book-item">
+        <app-book-item [book]="book"></app-book-item>
+      </div>
+    </div>
+</div>
